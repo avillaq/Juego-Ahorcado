@@ -36,6 +36,11 @@ export class TableroComponent {
       if (this.letraUsuario === this.palabraAleatoria.charAt(i)) {
         this.palabraUsuario[i] = this.letraUsuario;
         this.acierto= true;
+        
+        if (this.palabraUsuario.join("")===this.palabraAleatoria) {
+          console.log("GANASTEEE!!")
+        }
+      
       }
        
     }
