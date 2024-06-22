@@ -50,6 +50,7 @@ export class TableroComponent {
     }
     if (!this.acierto){
       this.intentos--;
+      this.imagenes.setImagenActual(this.intentos);
     }
     if (this.intentos === 0) {
       console.log("PERDISTEE!!")
