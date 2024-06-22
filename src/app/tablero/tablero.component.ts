@@ -14,6 +14,8 @@ export class TableroComponent {
   palabraAleatoria:string = "";
   palabraUsuario:string[] = []
 
+  letraUsuario:string = ""
+
   constructor(private palabras: PalabrasService){
     this.listaPalabras = palabras.getPalabras();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
