@@ -8,8 +8,5 @@ import { ImagenesService } from '../imagenes.service';
   styleUrl: './imagen-ahorcado.component.css'
 })
 export class ImagenAhorcadoComponent {
-  constructor(private imagenes: ImagenesService){}
-
-  urlImagen = this.imagenes.getImagen();
-
+  constructor(public servicioImg: ImagenesService){}
 }
