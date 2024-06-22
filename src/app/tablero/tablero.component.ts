@@ -29,6 +29,16 @@ export class TableroComponent {
     }
   }
 
-  ingresarLetra(){}
+  ingresarLetra(){
+    this.acierto= false;
+
+    for (let i = 0; i < this.palabraAleatoria.length; i++) {
+      if (this.letraUsuario === this.palabraAleatoria.charAt(i)) {
+        this.palabraUsuario[i] = this.letraUsuario;
+        this.acierto= true;
+      }
+       
+    }
+  }
 
 }
