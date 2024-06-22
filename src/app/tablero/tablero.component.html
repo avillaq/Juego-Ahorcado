@@ -1,1 +1,9 @@
-<p>tablero works!</p>
+<div class="card">
+    <div class="card-body">
+        <p>
+            @for (palabra of palabraUsuario; track $index) {
+                {{palabra}}
+            }
+        </p>
+    </div>
+</div>
