@@ -20,6 +20,8 @@ export class TableroComponent {
 
   acierto= false;
 
+  juegoTerminado = false;
+
   constructor(private palabras: PalabrasService){
     this.listaPalabras = palabras.getPalabras();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
@@ -39,6 +41,7 @@ export class TableroComponent {
         
         if (this.palabraUsuario.join("")===this.palabraAleatoria) {
           console.log("GANASTEEE!!")
+          this.juegoTerminado = true;
         }
       
       }
@@ -49,6 +52,7 @@ export class TableroComponent {
     }
     if (this.intentos === 0) {
       console.log("PERDISTEE!!")
+      this.juegoTerminado = true;
     }
     
     this.letraUsuario = ""
