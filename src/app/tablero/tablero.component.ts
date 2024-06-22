@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { PalabrasService } from "../palabras.service"
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tablero',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './tablero.component.html',
   styleUrl: './tablero.component.css'
 })
@@ -16,11 +17,12 @@ export class TableroComponent {
   constructor(private palabras: PalabrasService){
     this.listaPalabras = palabras.getPalabras();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
-    
+
     for (let i = 0; i < this.palabraAleatoria.length; i++) {
       this.palabraUsuario.push("_")
     }
-
   }
+
+  ingresarLetra(){}
 
 }
