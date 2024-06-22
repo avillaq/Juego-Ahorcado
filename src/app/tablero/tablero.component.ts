@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PalabrasService } from "../palabras.service"
 
 @Component({
   selector: 'app-tablero',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './tablero.component.css'
 })
 export class TableroComponent {
+
+  constructor(private palabras: PalabrasService){}
 
 }
