@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PalabrasService } from "../palabras.service"
+import { ImagenesService } from '../imagenes.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -16,13 +17,13 @@ export class TableroComponent {
 
   letraUsuario:string = ""
 
-  intentos = 6;
+  intentos = this.imagenes.getIntentos();
 
   acierto= false;
 
   juegoTerminado = false;
 
-  constructor(private palabras: PalabrasService){
+  constructor(private palabras: PalabrasService, private imagenes: ImagenesService){
     this.listaPalabras = palabras.getPalabras();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
 
