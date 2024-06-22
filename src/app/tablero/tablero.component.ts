@@ -60,4 +60,14 @@ export class TableroComponent {
     this.letraUsuario = ""
   }
 
+  reiniciarJuego(){
+    this.intentos = this.imagenes.getIntentos();
+    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
+    this.palabraUsuario = []
+    for (let i = 0; i < this.palabraAleatoria.length; i++) {
+      this.palabraUsuario.push("_")
+    }
+    this.juegoTerminado = false;
+  }
+
 }
