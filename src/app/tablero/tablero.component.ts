@@ -9,7 +9,13 @@ import { PalabrasService } from "../palabras.service"
   styleUrl: './tablero.component.css'
 })
 export class TableroComponent {
+  listaPalabras:string[] = [];
+  palabraAleatoria:string = "";
 
-  constructor(private palabras: PalabrasService){}
+  constructor(private palabras: PalabrasService){
+    this.listaPalabras = palabras.getPalabras();
+    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
+
+  }
 
 }
