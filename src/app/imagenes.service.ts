@@ -14,9 +14,6 @@ export class ImagenesService {
     return this.tamaño;
   }
 
-  getImagen(pos : number){
-    return this.imagenes[pos];
-  }
   setImagenActual(pos : number){
     this.posActual = this.tamaño-pos;
   }
