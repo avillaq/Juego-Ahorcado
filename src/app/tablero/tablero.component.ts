@@ -44,6 +44,14 @@ export class TableroComponent {
       }
        
     }
+    if (!this.acierto){
+      this.intentos--;
+    }
+    if (this.intentos === 0) {
+      console.log("PERDISTEE!!")
+    }
+    
+    this.letraUsuario = ""
   }
 
 }
