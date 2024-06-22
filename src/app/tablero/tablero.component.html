@@ -26,8 +26,18 @@
 
 <div class="card">
     <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <p>
-            Intentos restantes: {{intentos}}
-        </p>
+        @if (intentos>0) {
+            @if (juegoTerminado) {
+                <div class="alert alert-success" role="alert">
+                    Ganaste!!
+                </div>
+            }@else {
+                    Intentos restantes:{{intentos}}
+            }
+        }@else {
+            <div class="alert alert-danger" role="alert">
+                Perdiste!! La palabra era: <strong>{{palabraAleatoria}}</strong>
+            </div>
+        }
     </div>
 </div>
