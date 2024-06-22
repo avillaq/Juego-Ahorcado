@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "science-quiz": {
+    "ahorcado": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/science-quiz",
+            "outputPath": "dist/ahorcado",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "science-quiz:build:production"
+              "buildTarget": "ahorcado:build:production"
             },
             "development": {
-              "buildTarget": "science-quiz:build:development"
+              "buildTarget": "ahorcado:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bd1e948f-9dbf-4ee9-8b99-dee60dea9b3d"
   }
 }
