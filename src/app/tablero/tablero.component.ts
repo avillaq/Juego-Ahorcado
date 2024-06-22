@@ -16,6 +16,10 @@ export class TableroComponent {
 
   letraUsuario:string = ""
 
+  intentos = 6;
+
+  acierto= false;
+
   constructor(private palabras: PalabrasService){
     this.listaPalabras = palabras.getPalabras();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
