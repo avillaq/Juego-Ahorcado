@@ -25,7 +25,7 @@ export class TableroComponent {
 
   constructor(private palabras: PalabrasService, private imagenes: ImagenesService){
     this.listaPalabras = palabras.getPalabras();
-    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
+    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random() * this.listaPalabras.length)];
 
     for (let i = 0; i < this.palabraAleatoria.length; i++) {
       this.palabraUsuario.push("_")
@@ -62,11 +62,12 @@ export class TableroComponent {
 
   reiniciarJuego(){
     this.intentos = this.imagenes.getIntentos();
-    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random()*4)]
+    this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random() * this.listaPalabras.length)];
     this.palabraUsuario = []
     for (let i = 0; i < this.palabraAleatoria.length; i++) {
       this.palabraUsuario.push("_")
     }
+    this.imagenes.setImagenActual(this.intentos);
     this.juegoTerminado = false;
   }
 

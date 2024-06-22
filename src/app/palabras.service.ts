@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PalabrasService {
   // Palabras relacionadas con la programacion 
-  private palabras: string[] = ['programacion', 'javascript', 'typescript', 'angular', 'nodejs', 'express', 'mysql', 'php', 'python', 'java', 'perl','android', 'windows', 'linux'];
+  private palabras: string[] = ['programacion', 'javascript', 'typescript', 'angular', 'nodejs', 'express', 'mysql', 'python', 'java', 'perl','android', 'windows', 'linux'];
 
   getPalabras(){
     return this.palabras;
