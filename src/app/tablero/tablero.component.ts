@@ -64,6 +64,7 @@ export class TableroComponent {
     this.intentos = this.imagenes.getIntentos();
     this.palabraAleatoria = this.listaPalabras[Math.floor(Math.random() * this.listaPalabras.length)];
     this.palabraUsuario = []
+    this.letraUsuario = ""
     for (let i = 0; i < this.palabraAleatoria.length; i++) {
       this.palabraUsuario.push("_")
     }
